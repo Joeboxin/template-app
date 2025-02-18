@@ -4,23 +4,16 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 import { getAuth } from "firebase/auth";
 
-const firebaseConfig = process.env.NODE_ENV === 'production' ? {
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: "",
-  measurementId: ""
-} : {
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  storageBucket: "com",
-  messagingSenderId: "",
-  appId: "",
-  measurementId: ""
-}
+// Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDQIOVwBfMOcFQcoNklvQE-s67aLcq5-tc",
+  authDomain: "loose-8a2d8.firebaseapp.com",
+  projectId: "loose-8a2d8",
+  storageBucket: "loose-8a2d8.appspot.com",
+  messagingSenderId: "15109345844",
+  appId: "1:15109345844:web:fd902e3cf40fd9894df061",
+  measurementId: "G-F9C81KF81K",
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -29,4 +22,4 @@ export const storage = getStorage(app);
 export const database = getFirestore(app);
 export const analytics = () => getAnalytics(app);
 
-export default app
+export default app;
